@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Appliance Cost Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="assets/Favicon.png" type="image/png" sizes="48x48">
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="grid-item-1">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/Favicon.png" alt="Logo">
+                </a>
+                <a href="index.html">
+                    <h2>Appliance Electricity Cost Calculator</h2>
+                </a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul>
+                <li><a href="html/rates.html">Rates</a></li>
+                <li><a href="html/aboutUs.html">About Us</a></li>
+                <li class="dropdown">
+                    <button id="themes-button" class="dropdown-button">Themes
+                    <i id="arrow-icon" class="fas fa-chevron-down"></i> 
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><button id="theme-dark">Dark</button></li>
+                        <li><button id="theme-light">Light</button></li>
+                        <li><button id="theme-colorblind">Colorblind</button></li>
+                    </ul>
+                </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="grid-item-2">
+            <h2>Appliance Electricity Cost</h2>
+            <h1>Calculator</h1>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp; Calculate electricity power that affects your bills that are appliances or devices at your home. This website is dedicated for homeowners and renters alike who want to track their appliances and see which contributes the most to monthly bills. You can input multiple appliances and view a detailed breakdown of each.</p>
+        </div>
+
+        <div class="grid-item-3">
+            <form id="cost-form" class="grid-item-3-form">
+                <div class="rounded-box"> </div>
+                <h1 id="result">₱ 0</h1>
+                <h4>Cost Per Month</h4>
+
+                <div class="appliance">
+                    <label for="appliance-input">My Appliance</label>
+                    <div class="appliance-input">
+                        <input
+                            type="text"
+                            id="appliance-input"
+                            name="appliance"
+                            placeholder="Ex. Aircon"
+                        >
+
+                        <select id="appliance-dropdown" name="appliance-select">
+                            <option value="" hidden></option>
+                            <option value="Aircon">Aircon</option>
+                            <option value="Refrigerator">Refrigerator</option>
+                            <option value="Fan">Electric Fan</option>
+                            <option value="Desktop">Desktop</option>
+                            <option value="Lamp">Lamp</option>
+                            <option value="Lamp">Vacuum</option>
+                            <option value="Lamp">Washing Machine</option>
+                            <option value="Lamp">Rice Cooker</option>
+                            <option value="Lamp">Oven</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="power">
+                    <label for="power-input">Power Consumption</label>
+                    <div>
+                        <input
+                            type="number"
+                            id="power-input"
+                            name="power"
+                            placeholder="Energy Usage" 
+                            min="0.01"
+                            step="0.01"
+                        >
+
+                        <select id="power-dropdown" name="power-unit">
+                            <option value="W">W</option>
+                            <option value="kW">kW</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="util">
+                    <label for="util-input">Utility Rate</label>
+                    <div>
+                        <input
+                            type="number"
+                            id="util-input"
+                            name="utility"
+                            placeholder="Price of provider"
+                            min="1"
+                            step="0.01"
+                        >
+
+                        <select id="util-dropdown" name="utility-select">
+                            <option value="" hidden></option>
+                            <option value="11">Penelco</option>
+                            <option value="12">Meralco</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="hours">
+                    <label for="hours-input">Hours Per Day</label>
+                    <br>
+                    <input type="number" id="hours-input" name="hours" placeholder="0">
+                </div>
+
+                <div class="days">
+                    <label for="days-input">Days Per Month</label>
+                    <br>
+                    <input type="number" id="days-input" name="days" placeholder="30">
+                    
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" id="calculate">Calculate</button>
+                    <button type="reset" id="reset">Reset</button>
+                </div>
+            </form>
+        </div>  
+        
+        <div class="grid-item-4">
+            <h3>Input Summary</h3>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp; Here are the results the you have calculated, assuming each appliance runs at 100% capacity. Note that added taxes are not included.</p>
+            <br>
+            <table id="results-table">
+            <thead>
+                <tr>
+                <th>Remove</th>
+                <th>Appliances</th>
+                <th>Power</th>
+                <th>Unit</th>
+                <th>Hours Per Day</th>
+                <th>Days Per Month</th>
+                <th>Utility Rate</th>
+                <th>Cost (₱)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows in summaryTable.js -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="7" style="text-align: right; font-weight: bold;">Total Cost:</td>
+                    <td id="total-cost" style="font-weight: bold;">₱0.00</td>
+                </tr>
+            </tfoot>
+        </table>
+        </div>
+        <div class="grid-item-5">
+            <div id="credits">
+                <h6>AEEC</h6>
+                <p>&copy; AECC 2025 </p>
+                <p>All rights reserved</p>
+            </div>
+
+            <div id="contact">
+                <h6>Contact Us</h6>
+                <p>00000001</p>
+                <p>grp1@cs.to</p>
+            </div>
+
+            <div id="nav">
+                <h6>Directories</h6>
+                <a href="html/aboutUs.html"><p>About</p></a>
+                <a href="html/rates.html"><p>Rates</p></a>
+            </div>
+
+            <img src="assets/Primary.png" id="footer-logo">
+        </div>
+    </div>
+    <script src="js/formInput.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/summaryTable.js"></script>
+    <script src="js/nav.js"></script>
+
+    </body>
+</html>

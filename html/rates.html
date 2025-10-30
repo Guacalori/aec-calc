@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Appliance Cost Calculator</title>
+    <link rel="stylesheet" href="../css/rates.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="../assets/Favicon.png" type="image/png" sizes="48x48">
+
+</head>
+<body>
+    <div class="container">
+
+       <div class="grid-item-1">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/Favicon.png" alt="Logo">
+                </a>
+                <a href="../index.html">
+                    <h2>Appliance Electricity Cost Calculator</h2>
+                </a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../html/aboutUs.html">About Us</a></li>
+                <li class="dropdown">
+                    <button id="themes-button" class="dropdown-button">Themes
+                    <i id="arrow-icon" class="fas fa-chevron-down"></i> 
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><button id="theme-dark">Dark</button></li>
+                        <li><button id="theme-light">Light</button></li>
+                        <li><button id="theme-colorblind">Colorblind</button></li>
+                    </ul>
+                </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="grid-item-2">
+            <h2>Current Residential Rates</h2>
+        
+            <form id="searchForm" class="search">
+            <input type="text" id="search" name="search" placeholder="Search company name...">
+            <button type="submit">Search</button>
+            </form>
+
+        </div>
+        <div class="grid-item-3">
+            
+            <h2>Luzon</h2><br>
+            <div class="providers">
+        
+                <div class="name-providers" id="aleco">
+                    <img src="../assets/providers-logo/Luzon/aleco_.jpg">
+                    <h4>ALECO</h4>
+                    <p class="price">&#8369 11.01</p>
+                    <p>Albay Electric Cooperative</p>
+                    
+                </div>
+                <div class="name-providers" id="batanelco">
+                    <img src="../assets/providers-logo/Luzon/batanelco.png">
+                    <h4>BATANELCO</h4>
+                    <p class="price">&#8369 11.78</p>
+                    <p>Batanes Electric Cooperative</p>
+                </div>
+
+                <div class="name-providers" id="batelec">
+                    <img src="../assets/providers-logo/Luzon/batelec.jpg">
+                    <h4>BATELEC II</h4>
+                    <p class="price">&#8369 9.20</p>
+                    <p>Batangas Electric Cooperative</p>
+                </div>
+
+                <div class="name-providers" id="cagelco">
+                    <img src="../assets/providers-logo/Luzon/cagelco.jpg">
+                    <h4>CAGELCO II</h4>
+                    <p class="price">&#8369 10.16</p>
+                    <p>Cagayan Electric Cooperative</p>
+                </div>
+
+                <div class="name-providers" id="casureco">
+                    <img src="../assets/providers-logo/Luzon/casureco.jpg">
+                    <h4>CASURECO I</h4>
+                    <p class="price">&#8369 9.56</p>
+                    <p>Camarines Sur Electric Cooperative, Inc.</p>
+                </div>
+                       
+                <div class="name-providers" id="cenpelco">
+                    <img src="../assets/providers-logo/Luzon/cenpelco.jpeg">
+                    <h4>CENPELCO</h4>
+                    <p class="price">&#8369 10.16</p>
+                    <p>Central Pangasinan Electric Cooperative, Inc. </p>
+                </div>
+
+                <div class="name-providers" id="neeco">
+                    <img src="../assets/providers-logo/Luzon/neeco.png">
+                    <h4>NEECO II</h4>
+                    <p class="price">&#8369 8.24</p>
+                    <p>Nueva Ecija II Electric Coop, Inc. </p>
+                </div>
+
+                <div class="name-providers" id="penelco">
+                    <img src="../assets/providers-logo/Luzon/penelco.png">
+                    <h4>PENELCO</h4>
+                    <p class="price">&#8369 9.60</p>
+                    <p>Peninsula Electric Cooperative, Inc.</p>
+                </div>
+                <div class="name-providers" id="pelco">
+                    <img src="../assets/providers-logo/Luzon/pelco.jpg">
+                    <h4>PELCO II</h4>
+                    <p class="price">&#8369 10.09</p>
+                    <p>Pampanga Electric Cooperative, Inc</p>
+                </div>   
+                <div class="name-providers" id="zameco">
+                    <img src="../assets/providers-logo/Luzon/zameco.jpeg">
+                    <h4>ZAMECO</h4>
+                    <p class="price">&#8369 8.11</p>
+                    <p>Pampanga Electric Cooperative, Inc</p>
+                </div>   
+                
+            </div>
+        
+            <br><br><h2>Visayas</h2><br>
+            <div class="providers">
+                
+                <div class="name-providers" id="akelco">
+                    <img src="../assets/providers-logo/Visayas/akelco.jpg">
+                    <h4>AKELCO</h4>
+                    <p class="price">&#8369 12.72</p>
+                    <p>Aklan Electric Cooperative</p>
+                </div>
+                <div class="name-providers" id="boheco">
+                    <img src="../assets/providers-logo/Visayas/boheco.jpg">
+                    <h4>BOHECO I</h4>
+                    <p class="price">&#8369 10.93</p>
+                    <p>Bohol Electric Cooperative I</p>
+                </div>
+                <div class="name-providers" id="capelco">
+                    <img src="../assets/providers-logo/Visayas/capelco.jpg">
+                    <h4>CAPELCO</h4>
+                    <p class="price">&#8369 11.68</p>
+                    <p>Capiz Electric Cooperative</p>
+                </div>
+                <div class="name-providers" id="cebeco">
+                    <img src="../assets/providers-logo/Visayas/cebeco.jpg">
+                    <h4>CEBECO III</h4>
+                    <p class="price">&#8369 12.19</p>
+                    <p>Cebu Electric Cooperative</p>
+                </div> 
+                <div class="name-providers" id="ileco">
+                    <img src="../assets/providers-logo/Visayas/ileco.jpg">
+                    <h4>ILECO I</h4>
+                    <p class="price">&#8369 11.95</p>
+                    <p>Iloilo Electric Cooperative</p>
+                </div>
+                <div class="name-providers" id="leyeco">
+                    <img src="../assets/providers-logo/Visayas/leyeco_.jpg">
+                    <h4>LEYECO</h4>
+                    <p class="price">&#8369 12.90</p>
+                    <p>Cebu Electric Cooperative</p>
+                </div>
+                <div class="name-providers" id="meco">
+                    <img src="../assets/providers-logo/Visayas/meco.jpg">
+                    <h4>MECO</h4>
+                    <p class="price">&#8369 11.08</p>
+                    <p>Mactan Electric Company</p>
+                </div>
+                <div class="name-providers" id="noreco">
+                    <img src="../assets/providers-logo/Visayas/noreco.jpg">
+                    <h4>NORECO II</h4>
+                    <p class="price">&#8369 8.24</p>
+                    <p>Negros Oriental Electric Cooperative II</p>
+                </div>
+                <div class="name-providers" id="norsamelco">
+                    <img src="../assets/providers-logo/Visayas/norsamelco.jpg">
+                    <h4>NORSAMELCO</h4>
+                    <p class="price">&#8369 13.72</p>
+                    <p>Northern Samar Electric Cooperative</p>
+                </div>
+                <div class="name-providers" id="samelco">
+                    <img src="../assets/providers-logo/Visayas/samelco.jpg">
+                    <h4>SAMELCO I</h4>
+                    <p class="price">&#8369 12.73</p>
+                    <p>Samar Electric Cooperative I</p>
+                </div>
+                   
+            </div>
+
+            <br><br><h2>Mindanao</h2><br>
+            <div class="providers">
+                <div class="name-providers" id="cotelco">
+                    <img src="../assets/providers-logo/Mindanao/cotelco.png">
+                    <h4>COTELCO</h4>
+                    <p class="price">&#8369 10.39</p>
+                    <p>Cotabato Electric Cooperative</p>
+                </div>
+                <div class="name-providers" id="dasureco">
+                    <img src="../assets/providers-logo/Mindanao/dasureco.png">
+                    <h4>DASURECO</h4>
+                    <p class="price">&#8369 9.95</p>
+                    <p>Davao Del Sur Electric Cooperative</p>
+                </div>
+                <div class="name-providers" id="laneco">
+                    <img src="../assets/providers-logo/Mindanao/laneco.jpeg">
+                    <h4>LANECO</h4>
+                    <p class="price">&#8369 11.53</p>
+                    <p>Lanao Del Sur Electric Cooperative</p>
+                </div>
+                <div class="name-providers" id="moresco">
+                    <img src="../assets/providers-logo/Mindanao/morescoII.png">
+                    <h4>MORESCO II</h4>
+                    <p class="price">&#8369 12.47</p>
+                    <p>Misamis Oriental II Electric Service Cooperative, Inc</p>
+                </div>
+                <div class="name-providers" id="siarelco">
+                    <img src="../assets/providers-logo/Mindanao/siarelco.png">
+                    <h4>SIARELCO</h4>
+                    <p class="price">&#8369 8.69</p>
+                    <p>Siargao Electric Cooperative, Inc.</p>
+                </div> 
+                <div class="name-providers" id="socoteco">
+                    <img src="../assets/providers-logo/Mindanao/socoteco.jpg">
+                    <h4>SOCOTECO</h4>
+                    <p class="price">&#8369 8.49</p>
+                    <p>South Cotabato Electric Cooperative, Inc.</p>
+                </div>
+                <div class="name-providers" id="sukelco">
+                    <img src="../assets/providers-logo/Mindanao/sukelco.png">
+                    <h4>SUKELCO</h4>
+                    <p class="price">&#8369 11.13</p>
+                    <p>Sultan Kudarat Electric Cooperative, Inc. II</p>
+                </div>
+                <div class="name-providers" id="surnelco">
+                    <img src="../assets/providers-logo/Mindanao/surnelco.jpeg">
+                    <h4>SURNELCO</h4>
+                    <p class="price">&#8369 11.13</p>
+                    <p>Surigao del Norte Electric Cooperative, Inc.</p>
+                </div>
+                <div class="name-providers" id="zamcelco">
+                    <img src="../assets/providers-logo/Mindanao/zamcelco.png">
+                    <h4>ZAMCELCO</h4>
+                    <p class="price">&#8369 10.11</p>
+                    <p>Zamboanga City Electric Cooperative, Inc.</p>
+                </div> 
+                <div class="name-providers" id="zamsureco">
+                    <img src="../assets/providers-logo/Mindanao/zamsureco.jpeg">
+                    <h4>SAMSURECO II</h4>
+                    <p class="price">&#8369 9.64</p>
+                    <p>Zamboanga del Sur I Electric Cooperative, Inc.</p>
+                </div>
+                   
+            </div>
+            
+        </div>
+
+        <div class="grid-item-4">
+
+            <div id="credits">
+                <h6>AEEC</h6>
+                <p>&copy; AECC 2025 </p>
+                <p>All rights reserved</p>
+            </div>
+
+            <div id="contact">
+                <h6>Contact Us</h6>
+                <p>00000001</p>
+                <p>grp1@cs.to</p>
+            </div>
+
+            <div id="nav">
+                <h6>Directories</h6>
+                <a href="../html/aboutUs.html"><p>About</p></a>
+                <a href="../html/rates.html"><p>Rates</p></a>
+            </div>
+
+            <img src="../assets/Primary.png">
+
+        </div>
+
+    </div>
+    <script src="../js/nav.js"></script>
+    <script src="../js/searchThis.js"></script>
+    
+    </body>
+</html>

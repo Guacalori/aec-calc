@@ -1,0 +1,528 @@
+:root {
+    /*Cozy Energy Theme - Analogous/Complementary*/
+    --primary-color: #DEC430;
+    --secondary-color:#362E20;
+    --secondary-color2:#765C40;
+    --base-color: #F3EDE0;
+    --base-color2: #CBC8C9;
+    --text-color:#362E20;
+    --text-color2: #f0f0f0;
+}
+
+.light-theme {
+    --primary-color: #DEC430;
+    --secondary-color:#362E20;
+    --secondary-color2:#765C40;
+    --base-color: #F3EDE0;
+    --base-color2: #CBC8C9;
+    --text-color:#362E20;
+    --text-color2: #f0f0f0;
+}
+
+.dark-theme {
+    --primary-color:#E5B73B;
+   --secondary-color: #181818;
+    --secondary-color2: #3a3f44;
+    --base-color: #212529;
+    --base-color2: #343a40;  
+    --text-color: #f1f1f1;  
+    --text-color2:#FFFFFF;  
+}
+
+.color-blind-theme {
+    --primary-color: #0072B2; 
+    --secondary-color: #E69F00; 
+    --secondary-color2: #A26A46;
+    --base-color: #F5F5F5;
+    --base-color2: #CBC8C9;
+    --text-color: #1C2B29;
+    --text-color2: #3A3A3A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    background-color: var(--base-color);
+    margin-top:0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2f 2f 2f 2f 2f 2f;
+    grid-auto-rows: auto;
+    grid-template-areas:
+        "header header header header header header"
+        "hero hero hero hero hero hero"
+        "content content content content content content"
+        "footer footer footer footer footer footer"
+    ;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-item-1 {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Poppins", serif;
+    color:var(--text-color2);
+    background-color: var(--primary-color);
+    padding: 10px 0px 10px 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;  
+}
+
+.logo img {
+  width: 48px; 
+  height: 48px;
+  margin-right: 10px; 
+  font-size: 0.875;
+}
+
+.grid-item-1 h2{
+    font-size: 1em;
+}
+.grid-item-1 a{
+    text-decoration: none; 
+    color: inherit; 
+}
+.grid-item-1 ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    margin-right: 40px;
+    gap: 30px;
+    font-size: 1em;
+    padding-top: 7px;
+}
+
+.grid-item-1 li{
+    margin-left: 20px;
+}
+
+.grid-item-1 li a{
+    color: var(--text-color2);
+    text-decoration: none;
+}
+
+.grid-item-1 li a:hover{
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px; 
+    cursor: pointer;
+}
+
+.grid-item-1 li button{
+    color: var(--text-color2);
+}
+.grid-item-1 li button i{
+    margin-left: 10px;
+}
+
+/* Make sure the dropdown's parent has relative positioning */
+.nav-menu {
+  position: relative; /* Necessary for absolute positioning of the dropdown */
+}
+
+/* Style the arrow button */
+.dropdown-button {
+  background: none;  /* Remove default button background */
+  border: none;      /* Remove default border */
+  color: inherit;    /* Inherit the text color */
+  cursor: pointer;  /* Change cursor to pointer */
+  font-size: 0.875em;   /* Adjust font size for the arrow */
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+/* Initially hide the dropdown menu */
+.dropdown-menu {
+  display: none;  /* Hide by default */
+  position: absolute;  /* Position it below the parent item */
+  top: 100%;  /* Position the dropdown directly below the "Themes" item */
+  right: 0;
+  background-color: var(--secondary-color2);
+  padding: 10px 0;
+  border-radius: 5px;
+  min-width: 70px;  /* Optional: set a minimum width */
+  z-index: 1;  /* Ensure it appears above other elements */
+}
+
+/* Styling for dropdown menu items */
+.dropdown-menu li {
+  padding: 5px 20px;
+  font-size: 0.0875em;
+}
+
+.dropdown-menu li button, .dropdown-menu li button:hover {
+  background-color: none;
+  background: none;
+  border: none;
+  color: var(--text-color2);
+  text-decoration: none;
+}
+
+/* Optional: Hover effect for dropdown links */
+.dropdown-menu li:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Rotate the arrow when the dropdown is shown */
+.arrow-up {
+  transform: rotate(180deg);
+}
+
+/*Hamburger menu*/
+.hamburger {
+  display: none; /* hidden on desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.grid-item-2{
+    grid-area: hero;
+    padding: 40px;
+    text-align: justify;
+    font-family: Poppins;
+    color: var(--text-color);
+    background-image: url(../assets/Amber-bg.jpg);
+    background-size: cover;
+    padding: 90px;
+}
+.grid-item-2 h1{
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+
+.grid-item-2 h2{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: -20px;
+}
+.grid-item-3{
+    grid-area: content;
+    margin: 40px;
+    text-align: justify;
+    font-family: Poppins;
+    color: var(--text-color);
+}
+.grid-item-3 p, .grid-item-3 h4{
+    margin: 20px;
+    font-family: Georgia, serif;
+    text-align: center;
+}
+
+.grid-item-3 .members{
+    margin-bottom: 40px;
+}
+
+#thunder{
+    float: right;
+    width: 400px;
+    margin-top: -300px;
+    margin-right: -200px;   
+}
+
+.grid-item-4{
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-family: "Poppins", serif;
+    color:var(--text-color2);
+    background-color: var(--secondary-color2);
+    top:0;
+    left: 0;
+    right: 0;
+    padding: 20px 40px 20px 40px; 
+    
+}
+
+.logo {
+  display: flex;
+  align-items: center;  
+}
+
+.logo img {
+  width: 48px; 
+  height: 48px;
+  margin-right: 10px; 
+  font-size: 10px;
+}
+#nav a{
+    color: var(--text-color2);
+    text-decoration: underline; 
+}
+
+
+@media (max-width: 1024px) {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--base-color);
+    margin-top:0;
+    padding: 0;
+    width: 100%;
+    font-size: 1.125em;
+    overflow-x: hidden;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2f 2f 2f 2f 2f 2f;
+    grid-auto-rows: auto;
+    grid-template-areas:
+        "header header header header header header"
+        "hero hero hero hero hero hero"
+        "content content content content content content"
+        "footer footer footer footer footer footer"
+    ;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+}
+
+/* Small devices (laptops/tablets) */
+@media (max-width: 768px) {
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+p {
+   font-size: 0.875em;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: auto;
+    grid-template-areas:
+        "header"
+        "hero"
+        "content"
+        "footer"
+    ;
+    padding: 0;
+}
+
+.grid-item-1{
+    grid-area: header;
+}
+
+.hamburger {
+    display: flex;
+    margin-right: 20px;
+}
+
+.nav-menu {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: var(--secondary-color);
+    flex-direction: column;
+    width: 200px;
+    padding: 1em;
+    display: none; 
+}
+
+.nav-menu.active {
+    display: flex;
+
+}
+
+.nav-menu > ul {
+    flex-direction: column;
+    gap: 1em;  
+}
+
+.dropdown-menu {
+    position: relative;
+    width: 100%;
+}
+
+.grid-item-2{
+    grid-area: hero;
+}
+
+.grid-item-3{
+    grid-area: content;
+    font-size: 0.875em;
+}
+
+.grid-item-4{
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+}
+
+/* Small devices (laptops/tablets) */
+@media (max-width: 400px) {
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+p {
+   font-size: 0.6em;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: auto;
+    grid-template-areas:
+        "header"
+        "hero"
+        "content"
+        "footer"
+    ;
+    padding: 0;
+    overflow-x: clip;
+}
+
+.grid-item-1{
+    grid-area: header;
+    padding: 9px;
+    z-index: -20px;
+}
+
+.logo img {
+  width: 24px; 
+  height: 24px;
+  margin-right: 10px; 
+}
+
+.grid-item-1 h2{
+    font-size: 0.7em;
+}
+
+.hamburger {
+    display: flex;
+    margin-right: 20px;
+}
+
+.nav-menu {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: var(--secondary-color);
+    flex-direction: column;
+    width: 200px;
+    padding: 1em;
+    display: none; 
+    font-size: 0.875em;
+}
+
+.nav-menu.active {
+    display: flex;
+
+}
+
+.nav-menu > ul {
+    flex-direction: column;
+    gap: 1em;  
+}
+
+.dropdown-menu {
+    position: relative;
+    width: 100%;
+}
+
+.grid-item-2 {
+    grid-area: hero;
+    height: 80%;
+}
+
+
+.grid-item-3 {
+    grid-area: content;
+    font-size: 0.875em;
+    margin-top: -50px;
+
+}
+
+.grid-item-4 {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 50px;
+    font-size: 0.6em;
+}
+#footer-logo{
+    width: 35px;
+}
+}
