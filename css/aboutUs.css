@@ -135,37 +135,34 @@ body {
     margin-left: 10px;
 }
 
-/* Make sure the dropdown's parent has relative positioning */
 .nav-menu {
-  position: relative; /* Necessary for absolute positioning of the dropdown */
+  position: relative; 
+  font-size: 1em;
 }
 
-/* Style the arrow button */
 .dropdown-button {
-  background: none;  /* Remove default button background */
-  border: none;      /* Remove default border */
-  color: inherit;    /* Inherit the text color */
-  cursor: pointer;  /* Change cursor to pointer */
-  font-size: 0.875em;   /* Adjust font size for the arrow */
+  background: none;  
+  border: none;     
+  color: inherit;    
+  cursor: pointer; 
+  font-size: 0.875em; 
   padding: 5px;
   display: flex;
   align-items: center;
 }
 
-/* Initially hide the dropdown menu */
 .dropdown-menu {
-  display: none;  /* Hide by default */
-  position: absolute;  /* Position it below the parent item */
-  top: 100%;  /* Position the dropdown directly below the "Themes" item */
+  display: none;  
+  position: absolute; 
+  top: 100%;  
   right: 0;
   background-color: var(--secondary-color2);
   padding: 10px 0;
   border-radius: 5px;
-  min-width: 70px;  /* Optional: set a minimum width */
-  z-index: 1;  /* Ensure it appears above other elements */
+  min-width: 70px;  
+  z-index: 1;  
 }
 
-/* Styling for dropdown menu items */
 .dropdown-menu li {
   padding: 5px 20px;
   font-size: 0.0875em;
@@ -179,19 +176,17 @@ body {
   text-decoration: none;
 }
 
-/* Optional: Hover effect for dropdown links */
 .dropdown-menu li:hover {
   background-color: var(--secondary-color);
 }
 
-/* Rotate the arrow when the dropdown is shown */
 .arrow-up {
   transform: rotate(180deg);
 }
 
 /*Hamburger menu*/
 .hamburger {
-  display: none; /* hidden on desktop */
+  display: none; 
   flex-direction: column;
   justify-content: space-between;
   width: 25px;
@@ -455,7 +450,7 @@ p {
 
 .grid-item-1{
     grid-area: header;
-    padding: 9px;
+    padding: 21px;
     z-index: -20px;
 }
 
@@ -483,7 +478,7 @@ p {
     width: 200px;
     padding: 1em;
     display: none; 
-    font-size: 0.875em;
+    font-size: 1em;
 }
 
 .nav-menu.active {

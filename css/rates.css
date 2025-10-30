@@ -227,7 +227,6 @@ body {
     grid-area: content;
     text-align: justify;
     font-family: Poppins;
-    color: var(--text-color);
     margin:0 40px 200px 40px;
 }
 
@@ -235,6 +234,7 @@ body {
     display: flex;
     justify-content: space-between;
     gap:20px;
+    color: #181818;
     flex-wrap: wrap;
 }
 
@@ -257,6 +257,10 @@ body {
     margin-top: 6px;
     text-align: left;
     font-size: 0.75em;
+}
+
+.grid-item-3 h2  {
+    color: var(--text-color2);
 }
 
 .price{
@@ -517,8 +521,14 @@ p {
 
 .grid-item-1{
     grid-area: header;
-    padding: 9px;
+    padding: 21px;
     z-index: 1;
+}
+
+.logo img {
+  width: 24px; 
+  height: 24px;
+  margin-right: 10px; 
 }
 
 .grid-item-1 h2{
