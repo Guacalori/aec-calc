@@ -67,6 +67,9 @@ body {
         "footer footer footer footer footer footer"
     ;
     width: 100%;
+    width: auto-fit;
+    height: auto-fit;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
 }
