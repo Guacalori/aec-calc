@@ -504,6 +504,15 @@ p {
     ;
     padding: 0;
 }
+
+.grid-item-2 p{
+    font-size: 0.8em;
+    line-height: 1.5;
+}
+
+.grid-item-3 {
+    margin: auto-fit;
+}
 }
 
 /* Small devices (laptops/tablets) */
@@ -559,6 +568,11 @@ p {
     font-size: 0.75em;
 }
 
+.grid-item-2 p{
+    font-size: 0.8em;
+    line-height: 1.5;
+}
+
 .logo img {
   width: 24px; 
   height: 24px;
@@ -603,26 +617,32 @@ p {
     margin: 20px;
 }
 
+.grid-item-2 p{
+    font-size: 0.8em;
+    line-height: 1.5;
+}
+
 .grid-item-3{
     grid-area: calcu;
     display: flex;
     justify-content: center;
-    margin: 0;
-    position: relative;
+    margin: auto-fit;
     font-size: 0.6em;
     align-items: center;
     overflow: hidden;
+    grid-column: 1;
+    justify-self: center;
 }
 
 .rounded-box{
+    grid-area: calcu;
     position: absolute;
-    top: 50%;
-    left:37%;
-    transform: translate(-50%, -50%); 
-    width: 64%;                      
-    height: 95%;              
+    top: 50%;           
+    left: 50%;          
+    transform: translate(-50%, -50%);
+    max-width: 300px;  
+    height: 400px;           
     transition: all 0.3s ease;
-    margin-right: auto;
 }
 
 input, select{
@@ -634,11 +654,9 @@ input, select{
 }
 
 .grid-item-3 form{
-    margin-right: auto;
-    margin-left: 5px;
     display: flex;
     flex-direction: column;
-    min-width: 250px;
+    max-width: 250px;
 }
 
 .grid-item-4{
