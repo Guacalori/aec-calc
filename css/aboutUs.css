@@ -49,7 +49,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* min-height: 100vh; */
     background-color: var(--base-color);
     margin-top:0;
     padding: 0;
@@ -205,24 +204,23 @@ body {
 .grid-item-2{
     grid-area: hero;
     padding: 40px;
-    text-align: justify;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     font-family: Poppins;
     color: var(--text-color);
     background-image: url(../assets/Amber-bg.jpg);
     background-size: cover;
     padding: 90px;
-}
-.grid-item-2 h1{
-    text-align: center;
-    font-size: 50px;
-    margin-bottom: 40px;
+    padding-bottom: 150px;
 }
 
-.grid-item-2 h2{
+.grid-item-2 h1, .grid-item-2 h2{
     text-align: center;
-    font-size: 40px;
-    margin-bottom: -20px;
+    font-size: 50px;
 }
+
+
 .grid-item-3{
     grid-area: content;
     margin: 40px;
@@ -279,7 +277,7 @@ body {
 }
 
 
-@media (max-width: 1024px) {
+@media (min-width: 1025px) and (max-width: 1366px) {
 * {
     margin: 0;
     padding: 0;
@@ -290,7 +288,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     background-color: var(--base-color);
     margin-top:0;
     padding: 0;
@@ -316,7 +313,7 @@ body {
 }
 
 /* Small devices (laptops/tablets) */
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -407,7 +404,7 @@ p {
 }
 
 /* Small devices (mobile) */
-@media (max-width: 480px) {
+@media (max-width: 767px) {
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;

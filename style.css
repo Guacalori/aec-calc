@@ -432,7 +432,7 @@ div.error .error-message {
     text-decoration: underline; 
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1025px) and (max-width: 1366px) {
 * {
     margin: 0;
     padding: 0;
@@ -466,7 +466,7 @@ body {
     padding: 0;
 }
 }
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -507,7 +507,7 @@ p {
 }
 
 /* Small devices (laptops/tablets) */
-@media (max-width: 480px) {
+@media (max-width: 767px) {
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
