@@ -309,6 +309,20 @@ input:focus, select:focus {
     outline: none;  
 }
 
+.error-message {
+    color: red;
+    font-size: 1em;
+    visibility: hidden;  
+}
+
+div.error {
+    border: 2px solid red; 
+}
+
+div.error .error-message {
+    visibility: visible;
+}
+
 .grid-item-3 button{
     float: right;
     border-radius: 4px;

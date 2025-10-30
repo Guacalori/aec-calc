@@ -3,18 +3,23 @@ const totalCostCell = document.getElementById('total-cost');
 
 function updateTotalCost() {
   let total = 0;
+
   tbody.querySelectorAll('tr').forEach(row => {
     const costText = row.cells[7].textContent.replace('₱', '').trim();
     const cost = parseFloat(costText) || 0;
     total += cost;
   });
+
   totalCostCell.textContent = `₱${total.toFixed(2)}`;
 }
 
 document.getElementById('cost-form').addEventListener('submit', function(e) {
-  e.preventDefault();
+  if (!validateForm()) {
+    e.preventDefault();
+    console.log("Form validation failed");
+    return;  
+  }
 
-  // Get input values
   const appliance = document.getElementById('appliance-input').value.trim();
   const power = parseFloat(document.getElementById('power-input').value) || 0;
   const powerUnit = document.getElementById('power-dropdown').value;
@@ -22,21 +27,18 @@ document.getElementById('cost-form').addEventListener('submit', function(e) {
   const days = parseFloat(document.getElementById('days-input').value) || 0;
   const rate = parseFloat(document.getElementById('util-input').value) || 0;
 
-  // Conversion to kW
-  //const powerInKw = powerUnit === 'W' ? power / 1000 : power;
-
+  // Computation
   let powerInKw = 0;
-    if (powerUnit === 'W'){
-      powerInKw = power / 1000;
-    } else {
-      powerInKw = power;
-    }
+  if (powerUnit === 'W') {
+    powerInKw = power / 1000; 
+  } else {
+    powerInKw = power;
+  }
   const cost = powerInKw * hours * days * rate;
 
-  // Create a new table row
   const newRow = document.createElement('tr');
   newRow.innerHTML = `
-    <td><button class="delete-btn"><img src="/aec-calc/assets/trash-can.png"></button></td>
+    <td><button class="delete-btn"><img src="/aec-calc/assets/trash-can.png" alt="Delete"></button></td>
     <td>${appliance}</td>
     <td>${power.toFixed(2)}</td>
     <td>${powerUnit}</td>
@@ -48,8 +50,8 @@ document.getElementById('cost-form').addEventListener('submit', function(e) {
 
   // Append the row to the table body
   tbody.appendChild(newRow);
+  console.log("New row added:", newRow);
 
-  // Add event listener for the delete button
   newRow.querySelector('.delete-btn').addEventListener('click', function() {
     newRow.remove();
     updateTotalCost();
@@ -58,3 +60,16 @@ document.getElementById('cost-form').addEventListener('submit', function(e) {
   updateTotalCost();
 });
 
+
+function validateForm() {
+
+  const appliance = document.getElementById('appliance-input').value.trim();
+  const power = document.getElementById('power-input').value.trim();
+  const util = document.getElementById('util-input').value.trim();
+  const hours = document.getElementById('hours-input').value.trim();
+  const days = document.getElementById('days-input').value.trim();
+
+  let isValid = true;
+
+  return isValid;
+}

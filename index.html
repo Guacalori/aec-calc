@@ -82,6 +82,8 @@
                             <option value="Lamp">Rice Cooker</option>
                             <option value="Lamp">Oven</option>
                         </select>
+                        <div class="error-message" id="appliance-error"></div>
+
                     </div>
                 </div>
 
@@ -101,6 +103,7 @@
                             <option value="W">W</option>
                             <option value="kW">kW</option>
                         </select>
+                        <div class="error-message" id="power-error"></div>
                     </div>
                 </div>
 
@@ -121,6 +124,7 @@
                             <option value="11">Penelco</option>
                             <option value="12">Meralco</option>
                         </select>
+                        <div class="error-message" id="util-error"></div>
                     </div>
                 </div>
 
@@ -128,13 +132,14 @@
                     <label for="hours-input">Hours Per Day</label>
                     <br>
                     <input type="number" id="hours-input" name="hours" placeholder="0">
+                    <div class="error-message" id="hours-error"></div>
                 </div>
 
                 <div class="days">
                     <label for="days-input">Days Per Month</label>
                     <br>
                     <input type="number" id="days-input" name="days" placeholder="30">
-                    
+                    <div class="error-message" id="days-error"></div>
                 </div>
 
                 <div class="form-buttons">
@@ -198,6 +203,7 @@
     <script src="js/calculator.js"></script>
     <script src="js/summaryTable.js"></script>
     <script src="js/nav.js"></script>
+    <script src="js/validation.js"></script>
 
     </body>
 </html>
