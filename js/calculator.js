@@ -26,7 +26,7 @@ document.getElementById('result').textContent = `₱ ${result.toFixed(2)}`;
 });
 
 document.getElementById('reset').addEventListener('click', function() {
-  document.getElementById('result').textContent = '₱ 0';
+  document.getElementById('result').textContent = '₱ 0.00';
 });
 
 

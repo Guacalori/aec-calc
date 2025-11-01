@@ -515,7 +515,12 @@ p {
     grid-area: content;
     font-size: 0.875em;
     margin-top: -50px;
+}
 
+.divider {
+  border: none;
+  border-top: 2px solid #ccc;
+  margin: 38px 0;
 }
 
 .grid-item-4 {
@@ -526,6 +531,11 @@ p {
     margin-top: 50px;
     font-size: 0.6em;
 }
+
+.grid-item-4 p {
+    font-size: 1em;
+}
+
 #footer-logo{
     width: 35px;
 }
