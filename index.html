@@ -37,7 +37,7 @@
                 <li><a href="html/aboutUs.html">About Us</a></li>
                 <li class="dropdown">
                     <button id="themes-button" class="dropdown-button">Themes
-                    <i id="arrow-icon" class="fas fa-chevron-down"></i> 
+                        <i id="arrow-icon" class="fas fa-chevron-down"></i> 
                     </button>
                     <ul class="dropdown-menu">
                         <li><button id="theme-dark">Dark</button></li>
@@ -70,7 +70,7 @@
                             type="text"
                             id="appliance-input"
                             name="appliance"
-                            placeholder="Ex. Aircon"
+                            placeholder="Enter or select appliance name."
                         >
 
                         <select id="appliance-dropdown" name="appliance-select">
@@ -97,7 +97,7 @@
                             type="number"
                             id="power-input"
                             name="power"
-                            placeholder="Energy Usage" 
+                            placeholder="Enter Energy Usage." 
                             min="0.01"
                             step="0.01"
                         >
@@ -117,7 +117,7 @@
                             type="number"
                             id="util-input"
                             name="utility"
-                            placeholder="Price of provider"
+                            placeholder="Enter the rate."
                             min="1"
                             step="0.01"
                         >
@@ -162,14 +162,14 @@
                 <div class="hours">
                     <label for="hours-input">Hours Per Day</label>
                     <br>
-                    <input type="number" id="hours-input" name="hours" placeholder="0">
+                    <input type="number" id="hours-input" name="hours" placeholder="1-24. If kW/day enter 1.">
                     <div class="error-message" id="hours-error"></div>
                 </div>
 
                 <div class="days">
                     <label for="days-input">Days Per Month</label>
                     <br>
-                    <input type="number" id="days-input" name="days" placeholder="30">
+                    <input type="number" id="days-input" name="days" placeholder="1-30">
                     <div class="error-message" id="days-error"></div>
                 </div>
 
