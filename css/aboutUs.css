@@ -406,6 +406,9 @@ p {
     grid-area: content;
     font-size: 0.875em;
 }
+.grid-item-4 p {
+    font-size: 1em;
+}
 
 .grid-item-4{
     grid-area: footer;
@@ -513,7 +516,7 @@ p {
 
 .grid-item-3 {
     grid-area: content;
-    font-size: 0.875em;
+    font-size: 1.2em;
     margin-top: -50px;
 }
 

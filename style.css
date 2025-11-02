@@ -340,6 +340,11 @@ div.error .error-message {
     font-weight: 500;
 }
 
+.grid-item-3 option {
+    height: 100px;
+    overflow: scroll;
+}
+
 #calculate{
     background-color: var(--primary-color);
 }
