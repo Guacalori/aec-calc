@@ -64,6 +64,7 @@ body {
         "header header header header header header"
         "hero hero hero hero hero hero"
         "content content content content content content"
+        "feedback feedback feedback feedback feedback feedback"
         "footer footer footer footer footer footer"
     ;
     width: 100%;
@@ -240,15 +241,38 @@ body {
 .grid-item-3 .members{
     margin-bottom: 40px;
 }
+.grid-item-3 a {
+    display: flex;
+    justify-content: center;
+}
 
 #thunder{
     float: right;
     width: 400px;
     margin-top: -300px;
-    margin-right: -200px;   
+    margin-right: -200px;  
+    z-index: -1; 
 }
 
-.grid-item-4{
+.grid-item-4 {
+    grid-area: feedback;
+    font-family: Poppins;
+    display: flex;
+    font-size: 1.1em;
+    background-color: var(--primary-color);
+    padding: 20px;
+    margin: 40px;
+    justify-content: center;
+    color: var(--secondary-color);
+    border-radius: 20px;
+}
+
+.grid-item-4 a {
+    color: var(--secondary-color);
+    margin-left: 20px;
+}
+
+.grid-item-5{
     grid-area: footer;
     display: flex;
     justify-content: space-between;
@@ -307,6 +331,7 @@ body {
         "header header header header header header"
         "hero hero hero hero hero hero"
         "content content content content content content"
+        "feedback feedback feedback feedback feedback feedback"
         "footer footer footer footer footer footer"
     ;
     width: 100%;
@@ -354,6 +379,7 @@ p {
         "header"
         "hero"
         "content"
+        "feedback"
         "footer"
     ;
     padding: 0;
@@ -405,12 +431,17 @@ p {
 .grid-item-3{
     grid-area: content;
     font-size: 0.875em;
+    text-align: center;
 }
-.grid-item-4 p {
+.grid-item-4 {
+    grid-area: feedback;
+}
+
+.grid-item-5 p {
     font-size: 1em;
 }
 
-.grid-item-4{
+.grid-item-5{
     grid-area: footer;
     display: flex;
     flex-direction: row;
@@ -454,6 +485,7 @@ p {
         "header"
         "hero"
         "content"
+        "feedback"
         "footer"
     ;
     padding: 0;
@@ -520,13 +552,18 @@ p {
     margin-top: -50px;
 }
 
+.grid-item-4 {
+    grid-area: feedback;
+    font-size: 1em;
+}
+
 .divider {
   border: none;
   border-top: 2px solid #ccc;
   margin: 38px 0;
 }
 
-.grid-item-4 {
+.grid-item-5 {
     grid-area: footer;
     display: flex;
     justify-content: space-between;
@@ -535,7 +572,7 @@ p {
     font-size: 0.6em;
 }
 
-.grid-item-4 p {
+.grid-item-5 p {
     font-size: 1em;
 }
 
